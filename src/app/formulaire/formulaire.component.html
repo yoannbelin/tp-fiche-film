@@ -4,13 +4,18 @@
 <div class="formulaire">
     <form [formGroup]="model">
         <mat-form-field>
-            <input matInput formControlName="titre" placeholder="titre"/> 
+            <input matInput formControlName="titre" placeholder="titre"/>
+            <mat-error *ngIf="titre.invalid && titre.errors?.required">Ceci ne doit pas être vide</mat-error> 
         </mat-form-field>
         <mat-form-field>
-            <input matInput formControlName="appreciation" placeholder="appreciation"/> 
+            <input matInput formControlName="appreciation" placeholder="appreciation"/>
+            <mat-error *ngIf="appreciation.invalid && (appreciation.errors?.min || appreciation.errors?.max)">Ceci doit être compris entre 0 et 5</mat-error> 
+            <mat-error *ngIf="appreciation.errors?.required">Ceci ne doit pas être vide</mat-error> 
         </mat-form-field>
         <mat-form-field>
-            <input matInput formControlName="urlAffiche" placeholder="url"/> 
+            <input matInput formControlName="urlAffiche" placeholder="url"/>
+            <mat-error *ngIf="urlAffiche.invalid && urlAffiche.errors?.required">Ceci ne doit pas être vide</mat-error>
+            <mat-error *ngIf="urlAffiche.errors?.pattern">Ceci doit être une URL</mat-error> 
         </mat-form-field>
 
         <h3>Acteurs</h3>

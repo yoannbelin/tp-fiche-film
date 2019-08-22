@@ -1,0 +1,15 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{fiche.titre}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{fiche.urlAffiche}}" alt="Affiche de film">
+    <mat-card-content>
+      <p>
+        Appréciation : {{fiche.appreciation}}/5
+      </p>
+      <ul>
+          <li *ngFor="let acteur of fiche.acteurs">{{acteur.acteurName}}</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+  

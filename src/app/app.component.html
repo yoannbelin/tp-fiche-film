@@ -1,2 +1,3 @@
-<app-formulaire></app-formulaire>
+<app-formulaire *ngIf="!ficheFilm" (nouvelleFiche)="ficheFilm=$event"></app-formulaire>
+<app-fiche *ngIf="ficheFilm" [fiche]="ficheFilm"></app-fiche>
 
