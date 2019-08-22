@@ -1,3 +1,5 @@
 <app-formulaire *ngIf="!ficheFilm" (nouvelleFiche)="ficheFilm=$event"></app-formulaire>
 <app-fiche *ngIf="ficheFilm" [fiche]="ficheFilm"></app-fiche>
 
+<div [innerHTML]="3|stars"></div>
+
