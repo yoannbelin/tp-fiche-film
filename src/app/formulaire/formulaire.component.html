@@ -1,0 +1,33 @@
+
+<h1>Formulaire</h1>
+
+<div class="formulaire">
+    <form [formGroup]="model">
+        <mat-form-field>
+            <input matInput formControlName="titre" placeholder="titre"/> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput formControlName="appreciation" placeholder="appreciation"/> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput formControlName="urlAffiche" placeholder="url"/> 
+        </mat-form-field>
+
+        <h3>Acteurs</h3>
+        <div formArrayName= "acteurs">
+            <div *ngFor="let p of acteurForm.controls, let i=index" [formGroupName]="i">
+                <mat-form-field>
+                    <input matInput formControlName="acteurName" placeholder="acteur"/> 
+                </mat-form-field>
+            </div>
+        </div>
+        <button (click)="addActeur()" mat-raised-button color="primary">Ajouter un Acteur</button>
+    <br>
+    <button (click)="validationForm()" mat-raised-button color="primary">Valider</button>
+
+    
+    </form>
+
+
+    
+</div>
