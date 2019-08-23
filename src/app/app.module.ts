@@ -7,11 +7,12 @@ import { AppComponent } from './app.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormulaireComponent } from './formulaire/formulaire.component';
 import { FicheComponent } from './fiche/fiche.component';
-import { StarsPipe } from './stars.pipe'
+import { StarsPipe } from './stars.pipe';
+import { StarsComponent } from './stars/stars.component'
 
 
 @NgModule({
-  declarations: [AppComponent, FormulaireComponent, FicheComponent, StarsPipe],
+  declarations: [AppComponent, FormulaireComponent, FicheComponent, StarsPipe, StarsComponent],
   imports: [BrowserModule, BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,

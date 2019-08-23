@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core'
 })
 export class StarsPipe implements PipeTransform {
   transform(value: number): string {
-    let result='';
+    let result = ''
     for (let i = 1; i <= 5; i++) {
       result += `<mat-icon aria-hidden="false" aria-label="Example home icon">
       ${i <= value ? 'star' : 'star_border'}

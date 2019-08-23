@@ -5,7 +5,7 @@
     <img mat-card-image src="{{fiche.urlAffiche}}" alt="Affiche de film">
     <mat-card-content>
       <p>
-        Appréciation : {{fiche.appreciation}}/5
+        <app-stars [nb]="fiche.appreciation"></app-stars>
       </p>
       <ul>
           <li *ngFor="let acteur of fiche.acteurs">{{acteur.acteurName}}</li>
